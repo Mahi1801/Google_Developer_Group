@@ -83,10 +83,12 @@ main .hero{
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    animation: fadeInTop  1s ease-in-out;
 }
 .hero-content p{
     font-size: 20px;
     margin-bottom: 40px;
+    animation: fadeInBottom  1s ease-in-out;
 }
 .hero-content button {
     background-color: crimson;
@@ -296,4 +298,37 @@ footer {
     .footer-section {
         width: 100%;
     }
+}
+
+/* .moveFromLeft { animation-name: moveFromLeft } */
+@keyframes moveFromLeft {
+    from{ 
+        transform: translateX(-800px);
+    }
+}
+/* .fadeInTop { animation-name: fadeInTop } */
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to { 
+        opacity: 1 
+    }
+}
+.fadeInRight { animation-name: fadeInRight }
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to { opacity: 1 }
+}
+.fadeInBottom { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
 }
